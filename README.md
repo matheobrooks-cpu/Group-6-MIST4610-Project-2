@@ -74,10 +74,14 @@ The question is non-trivial because the data does not show a clear or consistent
     case_type: filtered to include only confirmed cases
 
 **OWID_VACCINATIONS (Our World in Data dataset)**
-  country_region: used to join with case data
-  date: aligns vaccination data with case data
-  total_vaccinations: cumulative number of vaccinations administered
-  people_fully_vaccinated: additional context on vaccination progress
+
+      country_region: used to join with case data
+      
+      date: aligns vaccination data with case data
+      
+      total_vaccinations: cumulative number of vaccinations administered
+      
+      people_fully_vaccinated: additional context on vaccination progress
 
 ## Data Manipulations (Question 2)
 **Filter**
