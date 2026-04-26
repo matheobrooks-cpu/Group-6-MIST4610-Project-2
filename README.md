@@ -59,6 +59,8 @@ I didn’t use several optional enhancements the AI suggested, such as metric ca
 ## Questions and Justification (Question 2)
 **Question: How did vaccination rates influence changes in COVID‑19 cases across different countries over time?**
 
+The question is non-trivial because the data does not show a clear or consistent relationship between vaccination rates and case counts, making it impossible to draw a straightforward conclusion about whether one influenced the other. This question is meaningful because the answer directly affected huge decisions decisions during the pandemic — from public health policy and business reopening to the billions of dollars governments spent producing and distributing vaccines. Whether vaccination rollouts actually reduced cases as intended has lasting implications for public trust, economic recovery, and how societies plan and resource their response to future health crises.
+
 Columns/tables used:
 
 **JHU_COVID_19 (Johns Hopkins dataset)**
