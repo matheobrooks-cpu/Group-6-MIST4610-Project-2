@@ -58,16 +58,16 @@ I didn’t use several optional enhancements the AI suggested, such as metric ca
 
 ## Questions and Justification (Question 2)
 **Question: How did vaccination rates influence changes in COVID‑19 cases across different countries over time?**
-<br>
+
 Columns/tables used:
 
-JHU_COVID_19 (Johns Hopkins dataset)
+**JHU_COVID_19 (Johns Hopkins dataset)**
   country_region: identifies the country being analyzed
   date: used to aggregate data by month
   cases: cumulative confirmed cases
   case_type: filtered to include only confirmed cases
 
-OWID_VACCINATIONS (Our World in Data dataset)
+**OWID_VACCINATIONS (Our World in Data dataset)**
   country_region: used to join with case data
   date: aligns vaccination data with case data
   total_vaccinations: cumulative number of vaccinations administered
