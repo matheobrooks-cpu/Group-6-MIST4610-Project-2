@@ -19,5 +19,7 @@ JHU_COVID_19: ~9.74 million rows.
 APPLE_MOBILITY: ~3.85 million rows.
 
 
-**Question 1:** Which countries had the highest amount of total deaths, and what percentage of cases ended in deaths?
+## Question 1
+**Which countries had the highest amount of total deaths, and what percentage of cases ended in deaths?**
+
 This question pulled from the JHU_COVID_19_TIMESERIES table, and used data from COUNTRY_REGION, CASES, and CASE_TYPE within the table to categorize and calculate the totals. It is nontrivial because it looks beyond raw totals and focuses on the relationship between cases and deaths, which helps reveal how different countries were affected by COVID‑19. It’s interesting and meaningful because visualizing this data can highlight patterns that might connect to larger factors like geography, temperature, healthcare quality, or economic strength. From our point of view, this makes it a strong starting point for deeper analysis because it doesn’t just show what happened, but encourages exploration into why outcomes varied across regions and what underlying conditions may have influenced them.
