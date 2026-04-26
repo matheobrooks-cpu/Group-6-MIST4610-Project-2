@@ -24,6 +24,13 @@ APPLE_MOBILITY: ~3.85 million rows.
 
 This question pulled from the JHU_COVID_19_TIMESERIES table, and used data from COUNTRY_REGION, CASES, and CASE_TYPE within the table to categorize and calculate the totals. It is nontrivial because it looks beyond raw totals and focuses on the relationship between cases and deaths, which helps reveal how different countries were affected by COVID‑19. It’s interesting and meaningful because visualizing this data can highlight patterns that might connect to larger factors like geography, temperature, healthcare quality, or economic strength. From our point of view, this makes it a strong starting point for deeper analysis because it doesn’t just show what happened, but encourages exploration into why outcomes varied across regions and what underlying conditions may have influenced them.
 
-## Question1 Chart 1
+## Question 1 Chart 1
 <img width="2457" height="757" alt="image" src="https://github.com/user-attachments/assets/f443694e-784d-429b-8a4e-0e655db1f99a" />
+
 The Total Deaths by Country chart shows how the absolute number of COVID‑19 deaths varied across nations, highlighting which countries experienced the most severe outcomes in raw terms. From an analytical perspective, it reflects both the scale of the pandemic’s impact and potential differences in population size, reporting accuracy, and public health response. Seeing Brazil and India at the top suggests regions with large populations and prolonged waves of infection, while smaller totals in other countries may indicate stronger containment measures or demographic differences. Interpreting this chart helps establish a baseline for comparing how scale and context influence mortality, setting up deeper questions about what underlying factors, such as healthcare capacity or socioeconomic conditions, contributed to these disparities.
+
+
+## Question 1 Chart 2
+<img width="2453" height="749" alt="image" src="https://github.com/user-attachments/assets/455d54fb-d628-458f-8168-f76036302d38" />
+
+The Percentage of Deaths by Country chart shows how deadly COVID‑19 was relative to the number of confirmed cases in each country. Analytically, this percentage is important because it normalizes the data. It accounts for differences in population size and testing rates, allowing for a clearer comparison of case fatality rates across regions. Countries like Peru and Egypt, which show higher percentages, may indicate challenges in healthcare capacity, testing accessibility, or reporting accuracy. This measure is meaningful because it highlights efficiency and resilience in health systems, helping identify where outcomes were disproportionately severe and prompting deeper investigation into social, environmental, or policy factors that influenced survival rates.
