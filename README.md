@@ -57,6 +57,22 @@ I asked Copilot to help me update my Snowflake Streamlit dashboard so that the C
 I didn’t use several optional enhancements the AI suggested, such as metric cards, dropdown filters, or additional visualizations, because I did not want to overcomplicate the code or the graphs. I also rejected earlier drafts of the script that included multiple queries or had formatting issues, and kept only the streamlined version that accomplished what I wanted it to.
 
 ## Questions and Justification (Question 2)
-**Question:How did vaccination rates influence changes in COVID‑19 cases across different countries over time?**
+**Question: How did vaccination rates influence changes in COVID‑19 cases across different countries over time?**
+<br>
+Columns/tables used:
+JHU_COVID_19 (Johns Hopkins dataset)
+  country_region: identifies the country being analyzed
+  date: used to aggregate data by month
+  cases: cumulative confirmed cases
+  case_type: filtered to include only confirmed cases
+<br>
+OWID_VACCINATIONS (Our World in Data dataset)
+country_region: used to join with case data
+date: aligns vaccination data with case data
+total_vaccinations: cumulative number of vaccinations administered
+people_fully_vaccinated: additional context on vaccination progress
+
+
+
 
 
