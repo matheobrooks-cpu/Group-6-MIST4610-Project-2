@@ -61,17 +61,17 @@ I didn’t use several optional enhancements the AI suggested, such as metric ca
 
 The question is non-trivial because the data does not show a clear or consistent relationship between vaccination rates and case counts, making it impossible to draw a straightforward conclusion about whether one influenced the other. This question is meaningful because the answer directly affected huge decisions decisions during the pandemic — from public health policy and business reopening to the billions of dollars governments spent producing and distributing vaccines. Whether vaccination rollouts actually reduced cases as intended has lasting implications for public trust, economic recovery, and how societies plan and resource their response to future health crises.
 
-Columns/tables used:
+**Columns/tables used:**
 
 **JHU_COVID_19 (Johns Hopkins dataset)**
 
-  country_region: identifies the country being analyzed
-  
-  date: used to aggregate data by month
-  
-  cases: cumulative confirmed cases
-  
-  case_type: filtered to include only confirmed cases
+    country_region: identifies the country being analyzed
+    
+    date: used to aggregate data by month
+    
+    cases: cumulative confirmed cases
+    
+    case_type: filtered to include only confirmed cases
 
 **OWID_VACCINATIONS (Our World in Data dataset)**
   country_region: used to join with case data
