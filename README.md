@@ -64,9 +64,13 @@ The question is non-trivial because the data does not show a clear or consistent
 Columns/tables used:
 
 **JHU_COVID_19 (Johns Hopkins dataset)**
+
   country_region: identifies the country being analyzed
+  
   date: used to aggregate data by month
+  
   cases: cumulative confirmed cases
+  
   case_type: filtered to include only confirmed cases
 
 **OWID_VACCINATIONS (Our World in Data dataset)**
@@ -79,9 +83,11 @@ Columns/tables used:
 **Filter**
 
 [SQL] WHERE j.country_region IN ('Germany')
+
 Limits the data to a single country. The IN operator is used rather than equals to support multiple country selections when the query is called from Streamlit.
 
 **Aggregation**
+
 [SQL] MAX(v.total_vaccinations) AS total_vaccinations
 MAX(v.people_fully_vaccinated) AS people_fully_vaccinated
 
@@ -89,7 +95,7 @@ Since the source data contains daily records, these aggregate daily values up to
 
 **Date Truncation**
 
-[SQL]DATE_TRUNC('month', j.date) AS month
+[SQL] DATE_TRUNC('month', j.date) AS month
 
 Rounds each daily date down to the first day of its month, allowing all daily records within the same month to be grouped together.
 
