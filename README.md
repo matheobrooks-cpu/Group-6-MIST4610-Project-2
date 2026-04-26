@@ -40,7 +40,7 @@ The Percentage of Deaths by Country chart shows how deadly COVID‑19 was relati
 <br>
 <br>
 <img width="2396" height="1547" alt="image" src="https://github.com/user-attachments/assets/b50f864c-e43e-44c2-896c-fbaedb0bed37" />
-
+<br>
 
 Adding the year slider in Streamlit is analytically valuable because it transforms the dashboard from a static snapshot into a dynamic, time‑based analysis tool. By allowing users to adjust the year, the visualization reveals how patterns of total deaths and fatality percentages evolved over time, making it possible to identify trends, turning points, and anomalies that a single‑year view would miss. This temporal flexibility supports deeper analytical reasoning, as users can compare the progression of the pandemic across regions, evaluate the effectiveness of interventions, and observe how external factors such as vaccine rollout or policy changes influenced outcomes. In essence, the year slider enhances the dashboard’s explanatory power, enabling a more nuanced understanding of how the pandemic’s impact shifted across different periods and helping connect data patterns to broader social, economic, and environmental contexts.
 
