@@ -75,6 +75,42 @@ Columns/tables used:
   total_vaccinations: cumulative number of vaccinations administered
   people_fully_vaccinated: additional context on vaccination progress
 
+## Data Manipulations (Question 2)
+**Filter**
+
+[SQL] WHERE j.country_region IN ('Germany')
+Limits the data to a single country. The IN operator is used rather than equals to support multiple country selections when the query is called from Streamlit.
+
+**Aggregation**
+[SQL] MAX(v.total_vaccinations) AS total_vaccinations
+MAX(v.people_fully_vaccinated) AS people_fully_vaccinated
+
+Since the source data contains daily records, these aggregate daily values up to a monthly level by taking the highest value recorded within each month. MAX is used because vaccination counts are cumulative — they only ever increase — so the last day of the month will always hold the highest value.
+
+**Date Truncation**
+
+[SQL]DATE_TRUNC('month', j.date) AS month
+
+Rounds each daily date down to the first day of its month, allowing all daily records within the same month to be grouped together.
+
+**LAG Function**
+
+[SQL] LAG(total_vaccinations) OVER (PARTITION BY country_region ORDER BY month)
+
+Looks back at the previous month's cumulative vaccination total for the same country, making it available in the current row so it can be subtracted to calculate the monthly increment.
+
+**Calculated Field**
+
+[SQL]COALESCE(total_vaccinations - LAG(total_vaccinations) OVER (
+    PARTITION BY country_region ORDER BY month), 0)
+AS monthly_vaccination_increment
+
+Subtracts the previous month's cumulative total from the current month's total to produce the number of new vaccinations administered that month. COALESCE replaces the NULL that would otherwise appear in the first month's row — where there is no previous month to subtract from — with zero instead.
+
+NOTE: The cases query applies the same transformations with two differences — an additional filter for case_type = 'Confirmed' to exclude non-case records such as deaths and recoveries, and the monthly increment calculation does not include a COALESCE wrapper meaning the first month returns NULL rather than zero.
+
+
+
 
 
 
