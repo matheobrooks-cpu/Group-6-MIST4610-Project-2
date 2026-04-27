@@ -136,21 +136,7 @@ NOTE: The explanations above are for the **Monthly New COVID-19 Vaccinations** S
 
 <img width="756" height="468" alt="Screenshot 2026-04-26 at 8 11 20 PM" src="https://github.com/user-attachments/assets/5d1554b5-fff8-4be8-a8b9-d90b737d077e" />
 
-**Analysis:** 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**Analysis:** This chart shows Germany's monthly new COVID-19 vaccinations from early 2020 through early 2023, with two sharp peaks hitting around 25 million and 27 million doses in April and November 2021 before dropping off dramatically and staying near zero through 2023. What this tells you analytically is that Germany's vaccination coverage wasn't a steady build — it came in two concentrated bursts, which means any attempt to correlate vaccination rates with case outcomes has to account for the fact that meaningful vaccine coverage only existed during a very specific and narrow timeframe. That uneven distribution matters because it limits how confidently you can attribute case trend changes to vaccination alone, and points to the need for additional variables like variant timing and waning immunity to be factored into any real analysis.
 
 **Question 2 Chart 2**
 
