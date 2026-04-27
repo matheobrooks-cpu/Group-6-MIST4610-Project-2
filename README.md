@@ -151,7 +151,7 @@ Looks back at the previous month's cumulative vaccination total for the same cou
 
 COALESCE handles the nulls. when LAG tries to subtract the previous month's vaccination total from the current month's, the very first month for each country has no previous row to look back at, so the subtraction returns NULL. COALESCE replaces that NULL with a 0. This is exactly what you want because before vaccinations started there were zero new vaccinations that month, so the chart starts at zero rather than showing a gap or blank space at the beginning of each country's timeline.
 
-NOTE: The explanations above are for the **Monthly New COVID-19 Vaccinations** Snowsight visualization. Everything applies to the **Monthly New Confirmed COVID-19 Cases** Snowsight visualization except for two things — an additional filter for case_type = 'Confirmed' to exclude non-case records such as deaths and recoveries, and the monthly increment calculation does not include a COALESCE wrapper meaning the first month returns NULL rather than zero.
+The explanations above are for the Monthly New COVID-19 Vaccinations Snowsight visualization. Everything applies to the Monthly New Confirmed COVID-19 Cases Snowsight visualization except for two things — an additional filter for case_type = 'Confirmed' to exclude non-case records such as deaths and recoveries, and the monthly increment calculation does not include a COALESCE wrapper meaning the first month returns NULL rather than zero.
 
 ## Analysis and Results (Question 2)
 **Question 2 Chart 1**
@@ -167,7 +167,7 @@ NOTE: The explanations above are for the **Monthly New COVID-19 Vaccinations** S
 
 **Analysis:** This chart shows Germany's monthly new confirmed COVID-19 cases from early 2020 through early 2023, remaining relatively flat and manageable below 200k through all of 2020 and 2021 before increasing to over 1.2 million new cases in early 2022, then staying elevated with several additional waves through 2023. What this tells us analytically is that the largest surge in cases after Germany's vaccination rollout, meaning there is no simple inverse relationship between vaccination rates and case counts in this data, meaning that more variables need to included in any sort of data analysis regarding this.
 
-NOTE: For Question 2 charts 1 and 2 above, Snowsight automatically determines x-axis label spacing for readability, which limits the ability to display every time interval even when the underlying data is aggregated monthly. This issue is addressed via Streamlit.
+For Question 2 charts 1 and 2 above, Snowsight automatically determines x-axis label spacing for readability, which limits the ability to display every time interval even when the underlying data is aggregated monthly. This issue is addressed via Streamlit.
 
 ## Streamlit App (Question 2)
 <img width="588" height="413" alt="Screenshot 2026-04-27 at 1 32 05 PM" src="https://github.com/user-attachments/assets/9f932259-2c4b-459d-984a-5ec39dfb18a1" />
