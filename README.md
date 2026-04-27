@@ -138,7 +138,8 @@ NOTE: The cases query applies the same transformations with two differences — 
 
 
 **Question 2 Chart 2**
-<img width="756" height="468" alt="Screenshot 2026-04-26 at 8 11 20 PM" src="https://github.com/user-attachments/assets/d9e05416-3f36-4fc3-a640-d5b46bb02d2a" />
+<img width="757" height="456" alt="Screenshot 2026-04-26 at 8 12 56 PM" src="https://github.com/user-attachments/assets/b7b0f6c8-2c33-42a1-aea5-0c3cb02bba34" />
+
 
 
 
