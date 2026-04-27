@@ -129,7 +129,7 @@ Looks back at the previous month's cumulative vaccination total for the same cou
 
 Subtracts the previous month's cumulative total from the current month's total to produce the number of new vaccinations administered that month. COALESCE replaces the NULL that would otherwise appear in the first month's row — where there is no previous month to subtract from — with zero instead.
 
-NOTE: The explanations above are for the **Monthly New COVID-19 Vaccinations** Snowsight visualization. Everything applies to the **Monthly New Confirmed COVID-19 Casest** Snowsight visualization except for two things — an additional filter for case_type = 'Confirmed' to exclude non-case records such as deaths and recoveries, and the monthly increment calculation does not include a COALESCE wrapper meaning the first month returns NULL rather than zero.
+NOTE: The explanations above are for the **Monthly New COVID-19 Vaccinations** Snowsight visualization. Everything applies to the **Monthly New Confirmed COVID-19 Cases** Snowsight visualization except for two things — an additional filter for case_type = 'Confirmed' to exclude non-case records such as deaths and recoveries, and the monthly increment calculation does not include a COALESCE wrapper meaning the first month returns NULL rather than zero.
 
 ## Analysis and Results (Question 2)
 **Question 2 Chart 1**
@@ -167,6 +167,10 @@ NOTE: Snowsight automatically determines x-axis label spacing for readability, w
 The multiselect dropdown allows users to select up to three countries at the same time - updating both charts to display all selected countries as a separate line/ data series. The three-country limit ensures the charts remain readable and the comparison meaningful. The analytical value comes from being able to directly compare vaccination and case patterns across countries on the same timeline. For example, when Germany, Italy, and Spain are displayed together, it becomes immediately visible that all three followed nearly identical vaccination timelines and volumes, yet their case trajectories diverged significantly — particularly in early 2022 where Germany reported dramatically higher case counts despite similar vaccination patterns. That divergence would be much harder to detect viewing each country separately.
 
 This interaction directly serves the analytical question of how vaccination rates influenced case changes across countries — placing both variables and multiple countries on the same screen simultaneously, allowing the user to assess whether similar vaccination patterns produced similar case outcomes or whether the relationship played out differently by country.
+
+**Use of AI**
+
+AI assistance was used during the development of the Streamlit dashboard to help troubleshoot errors, structure SQL queries, and implement features such as multi-country selection and data transformations. The final implementation reflects manual verification and adjustments to ensure accuracy and functionality.
 
 
 
