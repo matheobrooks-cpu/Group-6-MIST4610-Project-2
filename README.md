@@ -167,6 +167,8 @@ NOTE: Snowsight automatically determines x-axis label spacing for readability, w
 
 ## Streamlit App (Question 2)
 <img width="643" height="415" alt="Screenshot 2026-04-27 at 10 03 12 AM" src="https://github.com/user-attachments/assets/233e7f92-7c05-430d-8d3c-d28a0f9bcba7" />
+<img width="644" height="362" alt="Screenshot 2026-04-27 at 10 04 33 AM" src="https://github.com/user-attachments/assets/7e04a93c-cfb0-46cc-a13c-a84ae8f662dc" />
+
 
 
 
