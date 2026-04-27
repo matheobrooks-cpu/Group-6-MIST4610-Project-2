@@ -95,7 +95,7 @@ Limits the data to a single country. The IN operator is used rather than equals 
 [SQL] MAX(v.total_vaccinations) AS total_vaccinations
 MAX(v.people_fully_vaccinated) AS people_fully_vaccinated
 
-Since the source data contains daily records, these aggregate daily values up to a monthly level by taking the highest value recorded within each month. MAX is used because vaccination counts are cumulative — they only ever increase — so the last day of the month will always hold the highest value.
+Since the source data contains daily records, these aggregate daily values up to a monthly level by taking the highest value recorded within each month. MAX is used because vaccination counts are cumulative (they only ever increase), so the last day of the month will always hold the highest value.
 
 **Date Truncation**
 
@@ -118,6 +118,39 @@ AS monthly_vaccination_increment
 Subtracts the previous month's cumulative total from the current month's total to produce the number of new vaccinations administered that month. COALESCE replaces the NULL that would otherwise appear in the first month's row — where there is no previous month to subtract from — with zero instead.
 
 NOTE: The cases query applies the same transformations with two differences — an additional filter for case_type = 'Confirmed' to exclude non-case records such as deaths and recoveries, and the monthly increment calculation does not include a COALESCE wrapper meaning the first month returns NULL rather than zero.
+
+## Analysis and Results (Question 2)
+**Question 2 Chart 1**
+<img width="935" height="562" alt="Screenshot 2026-04-26 at 4 56 47 PM" src="https://github.com/user-attachments/assets/6721d627-86a0-481a-9115-d4a00ea85cf0" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Question 2 Chart 2**
+<img width="942" height="575" alt="Screenshot 2026-04-26 at 4 43 14 PM" src="https://github.com/user-attachments/assets/c1fb530a-a78c-4644-998c-466d407ff3bb" />
+
+
+
+
+
+
+## Streamlit App (Question 2)
+<img width="1156" height="668" alt="Screenshot 2026-04-26 at 5 13 01 PM" src="https://github.com/user-attachments/assets/c73cea3d-1b46-491c-82f0-9b69e3b37c66" />
+
+
+
+
 
 
 
