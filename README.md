@@ -156,13 +156,7 @@ NOTE: Snowsight automatically determines x-axis label spacing for readability, w
 <img width="643" height="415" alt="Screenshot 2026-04-27 at 10 03 12 AM" src="https://github.com/user-attachments/assets/233e7f92-7c05-430d-8d3c-d28a0f9bcba7" />
 <img width="644" height="362" alt="Screenshot 2026-04-27 at 10 04 33 AM" src="https://github.com/user-attachments/assets/7e04a93c-cfb0-46cc-a13c-a84ae8f662dc" />
 
-
-
-
-
-**Analysis:** The multiselect dropdown allows users to select up to three countries at the same time - updating both charts to display all selected countries as a separate line/ data series. The three-country limit ensures the charts remain readable and the comparison meaningful. The analytical value comes from being able to directly compare vaccination and case patterns across countries on the same timeline. For example, when Germany, Italy, and Spain are displayed together, it becomes immediately visible that all three followed nearly identical vaccination timelines and volumes, yet their case trajectories diverged significantly — particularly in early 2022 where Germany reported dramatically higher case counts despite similar vaccination patterns. That divergence would be much harder to detect viewing each country separately.
-
-This interaction directly serves the analytical question of how vaccination rates influenced case changes across countries — placing both variables and multiple countries on the same screen simultaneously, allowing the user to assess whether similar vaccination patterns produced similar case outcomes or whether the relationship played out differently by country.
+**Analysis:** The multiselect dropdown lets users pick up to three countries at once, updating both charts simultaneously so each selected country appears as its own data series. The three-country cap keeps everything readable without sacrificing the ability to draw real comparisons. The analytical value comes from being able to put vaccination patterns and case trends side by side across multiple countries on the same timeline.  Because when you load, for example, Germany, Italy, and Spain together, something immediately jumps out: all three countries vaccinated at almost exactly the same pace and volume through 2021, yet their case outcomes varied. Germany has a larger spike in early 2022 while Italy and Spain stay relatively contained, and that divergence is the whole point — it shows that similar vaccination rollouts did not produce similar case outcomes, which directly challenges any assumption that vaccination rate alone explains how the pandemic played out in a given country. That kind of insight is nearly impossible to spot when you're looking at each country in isolation, which is exactly what makes the comparison view analytically meaningful rather than just cosmetically nice.
 
 **Use of AI**
 
