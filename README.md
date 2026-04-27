@@ -121,8 +121,7 @@ NOTE: The cases query applies the same transformations with two differences — 
 
 ## Analysis and Results (Question 2)
 **Question 2 Chart 1**
-<img width="935" height="562" alt="Screenshot 2026-04-26 at 4 56 47 PM" src="https://github.com/user-attachments/assets/6721d627-86a0-481a-9115-d4a00ea85cf0" />
-
+<img width="753" height="464" alt="Screenshot 2026-04-26 at 8 03 58 PM" src="https://github.com/user-attachments/assets/47e1d51f-d332-4c8e-9914-6a2382004372" />
 
 
 
