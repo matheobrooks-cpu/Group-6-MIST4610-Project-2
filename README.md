@@ -87,7 +87,7 @@ This question is non-trivial because it challenges one of the most widely held a
 
 **Tables/columns used:**
 
-**JHU_COVID_19 (Johns Hopkins dataset)**
+**JHU_COVID_19 (Johns Hopkins table)**
 
     country_region: identifies the country being analyzed
             
@@ -97,7 +97,7 @@ This question is non-trivial because it challenges one of the most widely held a
             
     case_type: filtered to include only confirmed cases
 
-**OWID_VACCINATIONS (Our World in Data dataset)**
+**OWID_VACCINATIONS (Our World in Data table)**
 
     country_region: used to join with case data
       
