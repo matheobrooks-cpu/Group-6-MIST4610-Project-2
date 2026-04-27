@@ -73,7 +73,7 @@ The Case Fatality Rate (%) chart also shows meaningful variation: nations like P
 
 **All data viewable in Streamlit, only some countries listed in screenshots for ease of viewing.
 
-## Use of AI (Question 1)
+**Use of AI**
 I asked Copilot to help me update my Snowflake Streamlit dashboard so that the COVID‑19 graphs could be filtered by year using a slider. I had it look at the auto generated python script Streamlit gave me, and adjust it accordingly. Throughout the process, I requested full script rewrites to avoid unnecessary and confusing complications. The SQL was updated to correctly extract the year from the date field, the code structure was cleaned up to remove indentation errors, and the data‑loading logic was reorganized so both charts update smoothly when the slider changes. The final result was a fully working version of my original dashboard with the required upgrade.
 
 I didn’t use several optional enhancements the AI suggested, such as metric cards, dropdown filters, or additional visualizations, because I did not want to overcomplicate the code or the graphs. I also rejected earlier drafts of the script that included multiple queries or had formatting issues, and kept only the streamlined version that accomplished what I wanted it to.
@@ -177,7 +177,7 @@ NOTE: For Question 2 charts 1 and 2 above, Snowsight automatically determines x-
 
 Analytically this is significant because it suggests that neither vaccination timing, pace, or volume could reliably predict case outcomes across these three countries, which directly challenges the assumption that vaccination patterns alone can explain how the pandemic played out differently by country. Country-specific factors like prior infection rates, population behavior, variant timing, and public health policy played a larger role in shaping each country's pandemic trajectory than vaccination patterns did, which is exactly what the multiselect interaction is designed to surface by letting users test this relationship across different country combinations themselves. 
 
-## Use of AI (Question 2)
+**Use of AI**
 
 AI assistance was used during the development of the Snowsight dashboard and Streamlit app to help troubleshoot errors, structure SQL queries, and implement features such as multi-country selection and data transformations. The final implementation reflects manual verification and adjustments to ensure accuracy and functionality.
 
