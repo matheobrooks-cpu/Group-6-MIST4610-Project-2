@@ -23,6 +23,27 @@ APPLE_MOBILITY: ~3.85 million rows.
 **Which countries had the highest amount of total deaths, and what percentage of cases ended in deaths?**
 <br>
 This question pulled from the JHU_COVID_19_TIMESERIES table, and used data from COUNTRY_REGION, CASES, and CASE_TYPE within the table to categorize and calculate the totals. It is nontrivial because it looks beyond raw totals and focuses on the relationship between cases and deaths, which helps reveal how different countries were affected by COVID‑19. It’s interesting and meaningful because visualizing this data can highlight patterns that might connect to larger factors like geography, temperature, healthcare quality, or economic strength. From our point of view, this makes it a strong starting point for deeper analysis because it doesn’t just show what happened, but encourages exploration into why outcomes varied across regions and what underlying conditions may have influenced them.
+## Data Manupilations
+**Aggregation & Filter**
+
+    MAX(CASE WHEN CASE_TYPE = 'Deaths' THEN CASES ELSE 0 END) AS total_deaths,
+    MAX(CASE WHEN CASE_TYPE = 'Confirmed' THEN CASES ELSE 0 END) AS total_cases,
+
+Uses a CASE statement to isolate rows where CASE_TYPE equals 'Deaths' and 'Confirmed'. It then takes the maximum value of CASES for each country, effectively capturing the latest total death count, and it filters for 'Confirmed' case type and returns the maximum cumulative count.
+
+**Calculation**
+
+    ROUND((total_deaths / NULLIF(total_cases, 0)) * 100, 2) AS cfr_percentage
+
+Calculates the Case Fatality Rate (CFR): the percentage of deaths among confirmed cases. NULLIF(total_cases, 0) prevents division by zero errors, and ROUND(..., 2) formats the result to two decimal places for readability.
+
+**Secondary Filter**
+
+    GROUP BY COUNTRY_REGION
+    HAVING total_cases > 1000
+
+The GROUP BY clause organizes all rows by country so that aggregate functions like MAX() and ROUND() apply to each nation’s data rather than the entire dataset. The HAVING total_cases > 1000 filter then removes countries with fewer than 1,000 confirmed cases, keeping the focus on statistically meaningful results for your dashboard visualization.
+
 
 ## Question 1 Chart 1
 <img width="2457" height="757" alt="image" src="https://github.com/user-attachments/assets/f443694e-784d-429b-8a4e-0e655db1f99a" />
