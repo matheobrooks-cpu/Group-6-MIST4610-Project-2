@@ -92,7 +92,7 @@ Limits the data to a single country. The IN operator is used rather than equals 
 
 **JOIN**
 
-    [SQL] LEFT JOIN owid_vaccinations v 
+    LEFT JOIN owid_vaccinations v 
         ON j.country_region = v.country_region 
         AND j.date = v.date
 
@@ -100,28 +100,32 @@ This joins the COVID case dataset with the vaccination dataset by matching on co
 
 **Aggregation**
 
-[SQL] MAX(v.total_vaccinations) AS total_vaccinations
-MAX(v.people_fully_vaccinated) AS people_fully_vaccinated
+    MAX(v.total_vaccinations) AS total_vaccinations
+    MAX(v.people_fully_vaccinated) AS people_fully_vaccinated
 
 Since the source data contains daily records, these aggregate daily values up to a monthly level by taking the highest value recorded within each month. MAX is used because vaccination counts are cumulative (they only ever increase), so the last day of the month will always hold the highest value.
 
 **Date Truncation**
 
-[SQL] DATE_TRUNC('month', j.date) AS month
+    DATE_TRUNC('month', j.date) AS month
 
 Rounds each daily date down to the first day of its month, allowing all daily records within the same month to be grouped together.
 
 **LAG Function**
 
-[SQL] LAG(total_vaccinations) OVER (PARTITION BY country_region ORDER BY month)
+    LAG(total_vaccinations) OVER (PARTITION BY country_region ORDER BY month)
 
 Looks back at the previous month's cumulative vaccination total for the same country, making it available in the current row so it can be subtracted to calculate the monthly increment.
 
 **Calculated Field**
 
-[SQL]COALESCE(total_vaccinations - LAG(total_vaccinations) OVER (
-    PARTITION BY country_region ORDER BY month), 0)
-AS monthly_vaccination_increment
+    COALESCE(
+        total_vaccinations - LAG(total_vaccinations) OVER (
+            PARTITION BY country_region
+            ORDER BY month
+        ),
+        0
+    ) AS monthly_vaccination_increment
 
 Subtracts the previous month's cumulative total from the current month's total to produce the number of new vaccinations administered that month. COALESCE replaces the NULL that would otherwise appear in the first month's row — where there is no previous month to subtract from — with zero instead.
 
