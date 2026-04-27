@@ -143,14 +143,9 @@ NOTE: The explanations above are for the **Monthly New COVID-19 Vaccinations** S
 
 <img width="757" height="456" alt="Screenshot 2026-04-26 at 8 12 56 PM" src="https://github.com/user-attachments/assets/b7b0f6c8-2c33-42a1-aea5-0c3cb02bba34" />
 
-**Analysis:**
+**Analysis:** This chart shows Germany's monthly new confirmed COVID-19 cases from early 2020 through early 2023, remaining relatively flat and manageable below 200k through all of 2020 and 2021 before exploding to over 1.2 million new cases in early 2022, then staying elevated with several additional waves through 2023. What this tells you analytically is that the largest surge in cases occurred well after Germany's vaccination rollout had already peaked — meaning there is no simple inverse relationship between vaccination rates and case counts in this data, and any analysis treating vaccination as the primary driver of case trends would be analytically incomplete. This points to the need to incorporate additional variables like variant emergence and waning immunity into the analysis, and when read alongside the vaccination chart, it becomes clear that the two datasets together raise more questions than they answer about what actually drove Germany's case trajectory.
 
-
-
-
-
-
-NOTE: Snowsight automatically determines x-axis label spacing for readability, which limits the ability to display every time interval even when the underlying data is aggregated monthly. This issue is addressed via Streamlit.
+NOTE: For Question 2 charts 1 and 2 above, Snowsight automatically determines x-axis label spacing for readability, which limits the ability to display every time interval even when the underlying data is aggregated monthly. This issue is addressed via Streamlit.
 
 ## Streamlit App (Question 2)
 <img width="643" height="415" alt="Screenshot 2026-04-27 at 10 03 12 AM" src="https://github.com/user-attachments/assets/233e7f92-7c05-430d-8d3c-d28a0f9bcba7" />
