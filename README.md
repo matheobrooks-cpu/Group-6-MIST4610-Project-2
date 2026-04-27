@@ -90,6 +90,14 @@ The question is non-trivial because the data does not show a clear or consistent
 
 Limits the data to a single country. The IN operator is used rather than equals to support multiple country selections when the query is called from Streamlit.
 
+**JOIN**
+
+    [SQL] LEFT JOIN owid_vaccinations v 
+        ON j.country_region = v.country_region 
+        AND j.date = v.date
+
+This joins the COVID case dataset with the vaccination dataset by matching on country and date. A LEFT JOIN is used to ensure that all case data is preserved even if corresponding vaccination data is missing for certain dates.
+
 **Aggregation**
 
 [SQL] MAX(v.total_vaccinations) AS total_vaccinations
@@ -121,6 +129,7 @@ NOTE: The explanations above are for the **Monthly New COVID-19 Vaccinations** S
 
 ## Analysis and Results (Question 2)
 **Question 2 Chart 1**
+
 <img width="756" height="468" alt="Screenshot 2026-04-26 at 8 11 20 PM" src="https://github.com/user-attachments/assets/5d1554b5-fff8-4be8-a8b9-d90b737d077e" />
 
 
@@ -138,6 +147,7 @@ NOTE: The explanations above are for the **Monthly New COVID-19 Vaccinations** S
 
 
 **Question 2 Chart 2**
+
 <img width="757" height="456" alt="Screenshot 2026-04-26 at 8 12 56 PM" src="https://github.com/user-attachments/assets/b7b0f6c8-2c33-42a1-aea5-0c3cb02bba34" />
 
 
@@ -149,6 +159,12 @@ NOTE: Snowsight automatically determines x-axis label spacing for readability, w
 
 ## Streamlit App (Question 2)
 <img width="1156" height="668" alt="Screenshot 2026-04-26 at 5 13 01 PM" src="https://github.com/user-attachments/assets/c73cea3d-1b46-491c-82f0-9b69e3b37c66" />
+
+The multiselect dropdown allows users to select up to three countries at the same time - updating both charts to display all selected countries as a separate line/ data series. The three-country limit ensures the charts remain readable and the comparison meaningful. The analytical value comes from being able to directly compare vaccination and case patterns across countries on the same timeline. For example, when Germany, Italy, and Spain are displayed together, it becomes immediately visible that all three followed nearly identical vaccination timelines and volumes, yet their case trajectories diverged significantly — particularly in early 2022 where Germany reported dramatically higher case counts despite similar vaccination patterns. That divergence would be much harder to detect viewing each country separately.
+
+This interaction directly serves the analytical question of how vaccination rates influenced case changes across countries — placing both variables and multiple countries on the same screen simultaneously, allowing the user to assess whether similar vaccination patterns produced similar case outcomes or whether the relationship played out differently by country.
+
+
 
 
 
