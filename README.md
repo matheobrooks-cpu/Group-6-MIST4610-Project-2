@@ -86,7 +86,7 @@ The question is non-trivial because the data does not show a clear or consistent
 ## Data Manipulations (Question 2)
 **Filter**
 
-[SQL] WHERE j.country_region IN ('Germany')
+    WHERE j.country_region IN ('Germany')
 
 Limits the data to a single country. The IN operator is used rather than equals to support multiple country selections when the query is called from Streamlit.
 
