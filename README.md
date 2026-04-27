@@ -145,7 +145,7 @@ NOTE: The explanations above are for the **Monthly New COVID-19 Vaccinations** S
 
 
 
-
+NOTE: Snowsight automatically determines x-axis label spacing for readability, which limits the ability to display every time interval even when the underlying data is aggregated monthly. This issue is addressed via Streamlit.
 
 ## Streamlit App (Question 2)
 <img width="1156" height="668" alt="Screenshot 2026-04-26 at 5 13 01 PM" src="https://github.com/user-attachments/assets/c73cea3d-1b46-491c-82f0-9b69e3b37c66" />
