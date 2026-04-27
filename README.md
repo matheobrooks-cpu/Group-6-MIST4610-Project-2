@@ -19,11 +19,11 @@ JHU_COVID_19: ~9.74 million rows.
 APPLE_MOBILITY: ~3.85 million rows.
 
 
-## Question 1
+## Questions and Justification (Question 1)
 **Which countries had the highest amount of total deaths, and what percentage of cases ended in deaths?**
 <br>
 This question pulled from the JHU_COVID_19_TIMESERIES table, and used data from COUNTRY_REGION, CASES, and CASE_TYPE within the table to categorize and calculate the totals. It is nontrivial because it looks beyond raw totals and focuses on the relationship between cases and deaths, which helps reveal how different countries were affected by COVID‑19. It’s interesting and meaningful because visualizing this data can highlight patterns that might connect to larger factors like geography, temperature, healthcare quality, or economic strength. From our point of view, this makes it a strong starting point for deeper analysis because it doesn’t just show what happened, but encourages exploration into why outcomes varied across regions and what underlying conditions may have influenced them.
-## Data Manipulations
+## Data Manipulations (Question 1)
 **Aggregation & Filter**
 
     MAX(CASE WHEN CASE_TYPE = 'Deaths' THEN CASES ELSE 0 END) AS total_deaths,
@@ -45,18 +45,19 @@ Calculates the Case Fatality Rate (CFR): the percentage of deaths among confirme
 The GROUP BY clause organizes all rows by country so that aggregate functions like MAX() and ROUND() apply to each nation’s data rather than the entire dataset. The HAVING total_cases > 1000 filter then removes countries with fewer than 1,000 confirmed cases, keeping the focus on statistically meaningful results for your dashboard visualization.
 
 
-## Question 1 Chart 1
+## Analysis and Results (Question 1)
+**Question 1 Chart 1**
 <img width="2457" height="757" alt="image" src="https://github.com/user-attachments/assets/f443694e-784d-429b-8a4e-0e655db1f99a" />
 <br>
 The Total Deaths by Country chart shows how the absolute number of COVID‑19 deaths varied across nations, highlighting which countries experienced the most severe outcomes in raw terms. From an analytical perspective, it reflects both the scale of the pandemic’s impact and potential differences in population size, reporting accuracy, and public health response. Seeing Brazil and India at the top suggests regions with large populations and prolonged waves of infection, while smaller totals in other countries may indicate stronger containment measures or demographic differences. Interpreting this chart helps establish a baseline for comparing how scale and context influence mortality, setting up deeper questions about what underlying factors, such as healthcare capacity or socioeconomic conditions, contributed to these disparities.
 
 
-## Question 1 Chart 2
+**Question 1 Chart 2**
 <img width="2453" height="749" alt="image" src="https://github.com/user-attachments/assets/455d54fb-d628-458f-8168-f76036302d38" />
 <br>
 The Percentage of Deaths by Country chart shows how deadly COVID‑19 was relative to the number of confirmed cases in each country. Analytically, this percentage is important because it normalizes the data. It accounts for differences in population size and testing rates, allowing for a clearer comparison of case fatality rates across regions. Countries like Peru and Egypt, which show higher percentages, may indicate challenges in healthcare capacity, testing accessibility, or reporting accuracy. This measure is meaningful because it highlights efficiency and resilience in health systems, helping identify where outcomes were disproportionately severe and prompting deeper investigation into social, environmental, or policy factors that influenced survival rates.
 
-## Question 1 Streamlit Analysis
+## Streamlit App (Question 1)
 <img width="2392" height="1548" alt="image" src="https://github.com/user-attachments/assets/a3bf2d9a-e2c4-4204-b122-3d6e1691a920" />
 <br>
 <br>
@@ -72,7 +73,7 @@ The Case Fatality Rate (%) chart also shows meaningful variation: nations like P
 
 **All data viewable in Streamlit, only some countries listed in screenshots for ease of viewing.
 
-## Use of AI
+## Use of AI (Question 1)
 I asked Copilot to help me update my Snowflake Streamlit dashboard so that the COVID‑19 graphs could be filtered by year using a slider. I had it look at the auto generated python script Streamlit gave me, and adjust it accordingly. Throughout the process, I requested full script rewrites to avoid unnecessary and confusing complications. The SQL was updated to correctly extract the year from the date field, the code structure was cleaned up to remove indentation errors, and the data‑loading logic was reorganized so both charts update smoothly when the slider changes. The final result was a fully working version of my original dashboard with the required upgrade.
 
 I didn’t use several optional enhancements the AI suggested, such as metric cards, dropdown filters, or additional visualizations, because I did not want to overcomplicate the code or the graphs. I also rejected earlier drafts of the script that included multiple queries or had formatting issues, and kept only the streamlined version that accomplished what I wanted it to.
@@ -176,7 +177,7 @@ NOTE: For Question 2 charts 1 and 2 above, Snowsight automatically determines x-
 
 Analytically this is significant because it suggests that neither vaccination timing, pace, or volume could reliably predict case outcomes across these three countries, which directly challenges the assumption that vaccination patterns alone can explain how the pandemic played out differently by country. Country-specific factors like prior infection rates, population behavior, variant timing, and public health policy played a larger role in shaping each country's pandemic trajectory than vaccination patterns did, which is exactly what the multiselect interaction is designed to surface by letting users test this relationship across different country combinations themselves. 
 
-**Use of AI**
+## Use of AI (Question 2)
 
 AI assistance was used during the development of the Snowsight dashboard and Streamlit app to help troubleshoot errors, structure SQL queries, and implement features such as multi-country selection and data transformations. The final implementation reflects manual verification and adjustments to ensure accuracy and functionality.
 
