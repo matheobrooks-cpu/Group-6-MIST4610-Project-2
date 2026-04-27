@@ -1,7 +1,6 @@
 # Group-6-MIST4610-Project-2
 
-# Team Name
-61608 Group 6
+# Team Name: 61608 Group 6
 
 **Team Members:**
 1. Gio Kim [@gyokode](https://github.com/gyokode)
