@@ -74,6 +74,8 @@ The Case Fatality Rate (%) chart also shows meaningful variation: nations like P
 **All data viewable in Streamlit, only some countries listed in screenshots for ease of viewing.
 
 **Use of AI**
+
+
 I asked Copilot to help me update my Snowflake Streamlit dashboard so that the COVID‑19 graphs could be filtered by year using a slider. I had it look at the auto generated python script Streamlit gave me, and adjust it accordingly. Throughout the process, I requested full script rewrites to avoid unnecessary and confusing complications. The SQL was updated to correctly extract the year from the date field, the code structure was cleaned up to remove indentation errors, and the data‑loading logic was reorganized so both charts update smoothly when the slider changes. The final result was a fully working version of my original dashboard with the required upgrade.
 
 I didn’t use several optional enhancements the AI suggested, such as metric cards, dropdown filters, or additional visualizations, because I did not want to overcomplicate the code or the graphs. I also rejected earlier drafts of the script that included multiple queries or had formatting issues, and kept only the streamlined version that accomplished what I wanted it to.
