@@ -127,7 +127,7 @@ Looks back at the previous month's cumulative vaccination total for the same cou
         0
     ) AS monthly_vaccination_increment
 
-Subtracts the previous month's cumulative total from the current month's total to produce the number of new vaccinations administered that month. COALESCE replaces the NULL that would otherwise appear in the first month's row — where there is no previous month to subtract from — with zero instead.
+COALESCE here handles the nulls. when LAG tries to subtract the previous month's vaccination total from the current month's, the very first month for each country has no previous row to look back at, so the subtraction returns NULL. COALESCE catches that NULL and replaces it with 0. This is exactly what you want because before vaccinations started there were zero new vaccinations that month, so the chart starts at zero rather than showing a gap or blank space at the beginning of each country's timeline.
 
 NOTE: The explanations above are for the **Monthly New COVID-19 Vaccinations** Snowsight visualization. Everything applies to the **Monthly New Confirmed COVID-19 Cases** Snowsight visualization except for two things — an additional filter for case_type = 'Confirmed' to exclude non-case records such as deaths and recoveries, and the monthly increment calculation does not include a COALESCE wrapper meaning the first month returns NULL rather than zero.
 
