@@ -117,7 +117,7 @@ AS monthly_vaccination_increment
 
 Subtracts the previous month's cumulative total from the current month's total to produce the number of new vaccinations administered that month. COALESCE replaces the NULL that would otherwise appear in the first month's row — where there is no previous month to subtract from — with zero instead.
 
-NOTE: The cases query applies the same transformations with two differences — an additional filter for case_type = 'Confirmed' to exclude non-case records such as deaths and recoveries, and the monthly increment calculation does not include a COALESCE wrapper meaning the first month returns NULL rather than zero.
+NOTE: The explanations above are for the **Monthly New COVID-19 Vaccinations** Snowsight visualization. Everything applies to the **Monthly New Confirmed COVID-19 Casest** Snowsight visualization except for two things — an additional filter for case_type = 'Confirmed' to exclude non-case records such as deaths and recoveries, and the monthly increment calculation does not include a COALESCE wrapper meaning the first month returns NULL rather than zero.
 
 ## Analysis and Results (Question 2)
 **Question 2 Chart 1**
