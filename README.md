@@ -166,7 +166,10 @@ NOTE: The explanations above are for the **Monthly New COVID-19 Vaccinations** S
 NOTE: Snowsight automatically determines x-axis label spacing for readability, which limits the ability to display every time interval even when the underlying data is aggregated monthly. This issue is addressed via Streamlit.
 
 ## Streamlit App (Question 2)
-<img width="1156" height="668" alt="Screenshot 2026-04-26 at 5 13 01 PM" src="https://github.com/user-attachments/assets/c73cea3d-1b46-491c-82f0-9b69e3b37c66" />
+<img width="643" height="415" alt="Screenshot 2026-04-27 at 10 03 12 AM" src="https://github.com/user-attachments/assets/233e7f92-7c05-430d-8d3c-d28a0f9bcba7" />
+
+
+
 
 **Analysis:** The multiselect dropdown allows users to select up to three countries at the same time - updating both charts to display all selected countries as a separate line/ data series. The three-country limit ensures the charts remain readable and the comparison meaningful. The analytical value comes from being able to directly compare vaccination and case patterns across countries on the same timeline. For example, when Germany, Italy, and Spain are displayed together, it becomes immediately visible that all three followed nearly identical vaccination timelines and volumes, yet their case trajectories diverged significantly — particularly in early 2022 where Germany reported dramatically higher case counts despite similar vaccination patterns. That divergence would be much harder to detect viewing each country separately.
 
