@@ -155,7 +155,7 @@ NOTE: For Question 2 charts 1 and 2 above, Snowsight automatically determines x-
 
 **Use of AI**
 
-AI assistance was used during the development of the Streamlit dashboard to help troubleshoot errors, structure SQL queries, and implement features such as multi-country selection and data transformations. The final implementation reflects manual verification and adjustments to ensure accuracy and functionality.
+AI assistance was used during the development of the Snowsight dashboard and Streamlit app to help troubleshoot errors, structure SQL queries, and implement features such as multi-country selection and data transformations. The final implementation reflects manual verification and adjustments to ensure accuracy and functionality.
 
 
 
