@@ -7,6 +7,8 @@
 2. Matheo Brooks [@matheobrooks-cpu](https://github.com/matheobrooks-cpu)
 3. Luka Gangemi [@lukagangemi](https://github.com/lukagangemi)
 4. Luke Piazza [@lukepiazza479](https://github.com/lukepiazza479)
+## Dataset 
+We chose the COVID-19 Epidemiological Data set because it included a lot of data we were interested in exploring, specifically how the epidemic responded to changes ingeography and demographics. It also lent itself well to manipulation tools (like timelines) so we could make assess the data and draw conclusions about it. 
 
 ## Dataset Description
 Dataset: COVID-19 Epidemiological Data
